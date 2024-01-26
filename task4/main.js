@@ -13,10 +13,10 @@ const people = [
 ];
 
 function filterPeople(targetArray, targetGroup){
-    return targetArray.filter(person => person.group === targetGroup );
+    return targetArray.filter(person => person.hobbies.includes(targetGroup) );
 
 }
 
-let resultFilter = filterPeople(people, "СП-1"  );
+let resultFilter = filterPeople(people, "рыбалка" );
 
 console.log(resultFilter);
