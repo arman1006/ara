@@ -1,22 +1,32 @@
 //Работа с класами
-class Sum{
-    x;
-    y;
-    
+class um{
 
+    arr;
 
-    constructor(varX, varY, varZ){
-        this.x = varX;
-        this.y = varY;
-        this.z = varZ;
+    constructor(array){
+    this.arr = array;
     }
 
+    getSum(){
+        let sum = 0;
+        for( let i = 0; i < this.arr.length; i++){
+            sum += this.arr[i];
+        }
+
+        return sum;
+        
+    }
     print(){
-        this.totalSum = (this.x + this.y);
-        console.log(`Сумма чисел равна - ${this.totalSum}`);
+        const sum = this.getSum();
+        console.log(sum);
     }
+    
+      
 
-   
 }
-    const totalSum = new Sum(3, 56);
-    totalSum.print();
+
+const arr = [1, 4, 5, 6];
+const result = new um(arr);
+result.print();
+
+
