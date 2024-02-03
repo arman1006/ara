@@ -12,11 +12,11 @@ class Sum{
     }
 
     print(){
-        this.max = (this.x, this.y);
-        console.log(`ваше максимальое значение - ${this.max}`);
+        this.totalSum = (this.x + this.y);
+        console.log(`Сумма чисел равна - ${this.totalSum}`);
     }
 
    
 }
-    const max = new Sum(3, 56);
-    max.print();
+    const totalSum = new Sum(3, 56);
+    totalSum.print();
