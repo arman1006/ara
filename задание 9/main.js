@@ -1,32 +1,24 @@
-//Работа с класами
-class um{
-
-    arr;
-
+//Работа с клcac
+class Negative{
     constructor(array){
-    this.arr = array;
+    this.array = array;
     }
-
-    getSum(){
-        let sum = 0;
-        for( let i = 0; i < this.arr.length; i++){
-            sum += this.arr[i];
+    hasNegative(){
+        let number = [];
+        for (let number of this.array){
+            if(number < 0) {
+                console.log("да");
+            } else{
+                console.log("нет");
+            }
         }
-
-        return sum;
+        
+        return number;
         
     }
-    print(){
-        const sum = this.getSum();
-        console.log(sum);
-    }
     
-      
 
 }
-
-const arr = [1, 4, 5, 6];
-const result = new um(arr);
-result.print();
-
-
+const numbers = [1, 2, -3, 4, 5];
+const Negative = new Negative(numbers);
+Negative.hasNegative();
