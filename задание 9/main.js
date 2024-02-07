@@ -1,34 +1,22 @@
 //Работа с клcac
-class Filter{
-    i;
-    resultFilter;
-
+class NumCheck{
+    constructor(array){
+    this.array = array;
+    }
     
-
     filter(){
-        this.i = [];
-        for (let i = 0; i <= 100; i++){
-            if(i % 3 === 0 || i % 5 === 0 || i % 7 === 0){
-                this.i.push(i);
-            } 
-               
-
-        }
-        return this.i;
-       
+        return this.array.some(num => num % 3 === 0);
     }
+
     print() {
-        this.resultFilter = this.filter();
-        console.log(this.resultFilter);
+        if (this.filter()) {
+            console.log("Да");
+        } else {
+            console.log("Нет");
+        }
     }
-      
-    
-
-
-   
-
 }
-const filter = new Filter();
-filter.print();
 
-
+const numbers = [1, 2, 4, 1, 9, 10];
+const numCheck = new NumCheck(numbers);
+numCheck.print();
