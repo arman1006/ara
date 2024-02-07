@@ -1,30 +1,30 @@
 //Работа с клcacс
-class Asset{
-    constructor(name, price){
-     this.name = name;
-     this.price = price;
+class Animal{
+    constructor(view, habital){
+     this.view = view;
+     this.habital = habital;
     }
 
     
 }
 
-class FinancialAsset extends Asset{
-    constructor(name, price, profitability, typeOfInvestment){
-     super(name, price);
-     this.profitability = profitability;
-     this.typeOfInvestment = typeOfInvestment;
+class MammalAnimal extends Asset{
+    constructor(view, habital, nutrition, reproduction ){
+     super(view, habital);
+     this.nutrition = nutrition;
+     this.reproduction = reproduction;
      
     }
 }
 
-class RealAsset extends Asset{
-    constructor( name, price, adres, assetType ){
-        super(name, price);
-        this.adres = adres;
-        this.assetType = assetType;
+class BirdAnimal extends Asset{
+    constructor( view, habital, movement, nestingsite ){
+        super(view, habital);
+        this.movement = movement;
+        this.nestingsite = nestingsite;
         
     }
 }
 
-const bitcoin = new FinancialAsset ("storm", 40000, 5000,  "USDT");
+const bitcoin = new MammalAnimal ("насекомый", "трава" , "листики",  "спариваються");
 console.log(bitcoin);
