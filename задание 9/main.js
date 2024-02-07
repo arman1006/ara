@@ -1,5 +1,5 @@
 //Работа с клcac
-class Negative{
+class negative{
     constructor(array){
     this.array = array;
     }
@@ -20,5 +20,6 @@ class Negative{
 
 }
 const numbers = [1, 2, -3, 4, 5];
-const Negative = new Negative(numbers);
-Negative.hasNegative();
+const result = new negative(numbers);
+result.hasNegative();
+
