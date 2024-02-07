@@ -1,25 +1,23 @@
 //Работа с клcac
-class negative{
-    constructor(array){
-    this.array = array;
+class Filter{
+    inputNumbers;
+    resultFilter;
+
+    constructor(numbers){
+    this.inputNumbers = numbers;
     }
-    hasNegative(){
-        let number = [];
-        for (let number of this.array){
-            if(number < 0) {
-                console.log("да");
-            } else{
-                console.log("нет");
-            }
-        }
-        
-        return number;
+
+    filter(){
+        return this.inputNumbers.filter(number =>number % 3 === 0 || number % 5 === 0 || number % 7 === 0);
         
     }
-    
+    print(){
+        this.resultFilter = this.filter();
+        console.log(this.resultFilter);
+    }
 
 }
-const numbers = [1, 2, -3, 4, 5];
-const result = new negative(numbers);
-result.hasNegative();
+const inputNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const resultArrays = new Filter(inputNumbers);
+resultArrays.print();
 
